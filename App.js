@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
+import { store } from './store/store'
+import { Provider } from 'react-redux'
+import FavoritesContextProvider from './store/context/favorites-context'
+import Navigation from './navigation/Navigation'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <>
+      <StatusBar style="light" />
+      {/* <FavoritesContextProvider> */}
+      <Provider store={store}>
+        <Navigation />
+      </Provider>
+      {/* </FavoritesContextProvider> */}
+    </>
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-});
+})
