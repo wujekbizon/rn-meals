@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Meals",
+    "name": "My Favorite Meals",
     "slug": "Meals",
     "version": "1.0.0",
     "orientation": "default",
@@ -16,9 +16,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber":"1.0.0"
     },
     "android": {
+      "versionCode":1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
